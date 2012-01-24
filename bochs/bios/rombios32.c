@@ -1181,7 +1181,7 @@ static void mptable_init(void)
     putle32(&q, 0xfec00000); /* I/O APIC addr */
 
     /* irqs */
-    for(i = 0; i < 16; i++) {
+    for(i = 0; i < 32; i++) {
 #ifdef BX_QEMU
         /* One entry per ioapic input. Input 2 is covered by 
            irq0->inti2 override (i == 0). irq 2 is unused */
